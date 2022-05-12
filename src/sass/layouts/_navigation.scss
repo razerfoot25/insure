@@ -1,1 +1,45 @@
-// nav layouts
+@use "../components/buttons" as *;
+.nav {
+  overflow-x: hidden;
+  &__logo-container {
+    &--logo {
+      height: min-content;
+    }
+    &--menu-logo {
+      content: url("../images/icon-hamburger.svg");
+    }
+  }
+
+  &__menu-container {
+    &-bg {
+      transition: transform 500ms ease-out;
+      transform: translateX(100%);
+
+      position: absolute;
+      inset: 5.25rem 0 20vh 0;
+
+      background-color: var(--clr-neutral-700);
+      background-image: url("../images/bg-pattern-mobile-nav.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+    }
+
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+      color: var(--clr-neutral-500);
+    }
+    :nth-child(4) a {
+      @include btn-outline-inverted;
+      display: block;
+    }
+  }
+}
+.nav--open {
+  content: url("../images/icon-close.svg");
+}
+.menu--open {
+  transform: translateX(0);
+}

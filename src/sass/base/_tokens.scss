@@ -25,16 +25,12 @@
 
   --spacer-margin: 2em;
 
-  --paddingx-xs: 0.25em;
-  --paddingx-sm: 0.5em;
-  --paddingx-md: 1em;
-  --paddingx-lg: 2em;
-  --paddingx-xl: 4em;
-  --paddingy-xs: 0.25em;
-  --paddingy-sm: 0.5em;
-  --paddingy-md: 1em;
-  --paddingy-lg: 2em;
-  --paddingy-xl: 4em;
+  --padding-xs: Clamp(0.25em, 1vw, 0.5em);
+  --padding-sm: 0.5em;
+  --padding-md: 1em;
+  --padding-lg: 2em;
+  --padding-xl: 4em;
+  --padding-2xl: 8em;
 
   @each $base, $shade in $colors {
     @each $shades, $colors in $shade {

@@ -6,10 +6,15 @@
   }
 }
 
+.grid {
+  display: grid;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns:
-    Minmax(1rem, 1fr) repeat(
+    Minmax(1rem, 1fr)
+    repeat(
       var(--grid-column),
       Minmax(0, Calc(var(--max-container-width) / var(--grid-column)))
     )
@@ -54,9 +59,14 @@
   gap: var(--grid-gap);
 }
 
+.flex {
+  display: flex;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
+  gap: var(--grid-gap);
   @include breakpoint(large) {
     flex-direction: row;
   }
@@ -65,23 +75,53 @@
 .flex-row {
   display: flex;
   flex-direction: column;
+  gap: var(--grid-gap);
 }
 
-.justify-start {
+.justify-items-start {
   justify-items: start;
 }
 
-.justify-center {
+.justify-items-center {
   justify-items: center;
 }
 
-.justify-end {
+.justify-items-end {
   justify-items: end;
 }
 
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
 .justify-space-between {
-  display: flex;
   justify-content: space-between;
+}
+
+.justify-space-between-lg {
+  @include breakpoint(large) {
+    justify-content: space-between;
+  }
 }
 
 .align-start {
@@ -95,34 +135,45 @@
   align-items: end;
 }
 
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
 .px-xs {
-  padding-inline: var(--paddingx-xs);
+  padding-inline: var(--padding-xs);
 }
 .px-sm {
-  padding-inline: var(--paddingx-sm);
+  padding-inline: var(--padding-sm);
 }
 .px-md {
-  padding-inline: var(--paddingx-md);
+  padding-inline: var(--padding-md);
 }
 .px-lg {
-  padding-inline: var(--paddingx-lg);
+  padding-inline: var(--padding-lg);
 }
 .px-xl {
-  padding-inline: var(--paddingx-xl);
+  padding-inline: var(--padding-xl);
 }
 
 .py-xs {
-  padding-block: var(--paddingy-xs);
+  padding-block: var(--padding-xs);
 }
 .py-sm {
-  padding-block: var(--paddingy-sm);
+  padding-block: var(--padding-sm);
 }
 .py-md {
-  padding-block: var(--paddingy-md);
+  padding-block: var(--padding-md);
 }
 .py-lg {
-  padding-block: var(--paddingy-lg);
+  padding-block: var(--padding-lg);
 }
 .py-xl {
-  padding-block: var(--paddingy-xl);
+  padding-block: var(--padding-xl);
 }
