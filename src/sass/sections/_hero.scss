@@ -1,0 +1,92 @@
+@use "../components/buttons" as *;
+@use "../abstracts/breakpoints" as *;
+
+.hero {
+  position: relative;
+  padding-bottom: 12em;
+  &::before {
+    content: "";
+    z-index: -1;
+    background-color: var(--clr-primary-700);
+
+    position: absolute;
+    inset: 0 0 10rem 0;
+  }
+  background-image: url("../images/bg-pattern-intro-left-mobile.svg"),
+    url("../images/bg-pattern-intro-right-mobile.svg");
+  background-size: 40%, 30%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 45%, 100% 100%;
+
+  &__textfield {
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    h1 {
+      color: var(--clr-neutral-500);
+    }
+    p {
+      color: var(--clr-neutral-500);
+    }
+    button {
+      @include btn-outline-inverted;
+      background-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: auto 30% -9em 30%;
+      outline: 1px solid var(--clr-neutral-600);
+    }
+  }
+  &__image {
+    grid-row: 1;
+    img {
+      content: url("../images/image-intro-mobile.jpg");
+      max-width: 100vw;
+      width: 100vw;
+      margin-inline: calc(-50vw + 50%);
+    }
+  }
+  @include breakpoint(large) {
+    &::before {
+      inset: 0 0 40vh 0;
+    }
+    padding-bottom: 4em;
+    background-image: url("../images/bg-pattern-intro-left-desktop.svg"),
+      url("../images/bg-pattern-intro-right-desktop.svg");
+    background-size: 10%, 25%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 100%, 100% 0;
+
+    &__textfield {
+      align-items: flex-start;
+      text-align: left;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0 70% auto 0;
+        outline: 1px solid var(--clr-primary-600);
+      }
+      &::after {
+        inset: auto 70% -1em 0;
+      }
+    }
+
+    &__image {
+      grid-column: 2;
+      z-index: -1;
+      img {
+        content: url("../images/image-intro-desktop.jpg");
+        width: 100%;
+        height: 90%;
+        object-fit: contain;
+        margin-inline: auto;
+      }
+    }
+  }
+}

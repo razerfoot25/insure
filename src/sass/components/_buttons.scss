@@ -18,8 +18,10 @@
 }
 
 @mixin btn-outline {
-  @extend %btn;
+  padding: 0.5em 1.25em;
 
+  cursor: pointer;
+  border: 0;
   color: var(--clr-neutral-700);
   outline: 2px solid var(--clr-neutral-700);
 
@@ -30,8 +32,10 @@
 }
 
 @mixin btn-outline-inverted {
-  @extend %btn;
+  padding: 0.5em 1.25em;
 
+  cursor: pointer;
+  border: 0;
   color: var(--clr-neutral-500);
   outline: 2px solid var(--clr-neutral-500);
 

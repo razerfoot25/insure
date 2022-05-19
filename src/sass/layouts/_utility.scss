@@ -125,14 +125,29 @@
 }
 
 .align-start {
-  align-items: flex-start;
+  align-items: start;
+  @include breakpoint(large) {
+    &-lg {
+      align-items: start;
+    }
+  }
 }
 .align-center {
   align-items: center;
+  @include breakpoint(large) {
+    &-lg {
+      align-items: center;
+    }
+  }
 }
 
 .align-end {
   align-items: end;
+  @include breakpoint(large) {
+    &-lg {
+      align-items: end;
+    }
+  }
 }
 
 .align-self-start {
@@ -167,13 +182,43 @@
 }
 .py-sm {
   padding-block: var(--padding-sm);
+
+  &-lg {
+    @include breakpoint(large) {
+      padding-block: var(--padding-sm);
+    }
+  }
 }
 .py-md {
   padding-block: var(--padding-md);
+  &-lg {
+    @include breakpoint(large) {
+      padding-block: var(--padding-md);
+    }
+  }
 }
 .py-lg {
   padding-block: var(--padding-lg);
+  &-lg {
+    @include breakpoint(large) {
+      padding-block: var(--padding-lg);
+    }
+  }
 }
 .py-xl {
   padding-block: var(--padding-xl);
+  &-lg {
+    @include breakpoint(large) {
+      padding-block: var(--padding-xl);
+    }
+  }
+}
+
+.py-2xl {
+  padding-block: var(--padding-2xl);
+  &-lg {
+    @include breakpoint(large) {
+      padding-block: var(--padding-2xl);
+    }
+  }
 }
