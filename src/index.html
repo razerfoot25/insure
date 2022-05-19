@@ -18,9 +18,7 @@
   <body>
     <div class="grid-container">
       <nav class="nav flex flex-col justify-space-between-lg py-md">
-        <div
-          class="nav__logo-container flex justify-space-between align-end py-sm"
-        >
+        <div class="nav__logo-container flex justify-space-between align-end">
           <img
             class="nav__logo-container--logo"
             src="./images/logo.svg"
@@ -29,7 +27,7 @@
           <img class="nav__logo-container--menu-logo" src="" alt="menu icon" />
         </div>
         <div class="nav__menu-container-bg">
-          <ul class="nav__menu-container flex-col py-lg px-md">
+          <ul class="nav__menu-container flex-col px-md">
             <li class="nav__menu-container--items">
               <a href="">How we work</a>
             </li>
@@ -46,7 +44,7 @@
     <main class="">
       <section class="hero grid-container py-xl-lg">
         <div class="grid-col-2">
-          <div class="hero__textfield spacer flex flex-row py-xl">
+          <div class="hero__textfield spacer flex flex-row py-lg">
             <h1>Humanizing your insurance.</h1>
             <p>
               Get your life insurance coverage easier and faster. We blend our
@@ -61,10 +59,10 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about grid-container">
         <h2>We’re different</h2>
-        <div class="about__articles">
-          <article>
+        <div class="about__articles grid-col-3 py-xl">
+          <article class="spacer">
             <img
               src="./images/icon-snappy-process.svg"
               alt="lightning bolt logo"
@@ -75,7 +73,7 @@
               Don’t get stuck filling in tedious forms.
             </p>
           </article>
-          <article>
+          <article class="spacer">
             <img src="./images/icon-affordable-prices.svg" alt="dollar sign" />
             <h4>Affordable Prices</h4>
             <p>
@@ -83,7 +81,7 @@
               may be low, but we still offer the best coverage possible.
             </p>
           </article>
-          <article>
+          <article class="spacer">
             <img src="./images/icon-people-first.svg" alt="person image" />
             <h5>People First</h5>
             <p>
@@ -94,50 +92,58 @@
         </div>
       </section>
 
-      <section>
-        <h6>Find out more about how we work</h6>
-        <button>How we work</button>
+      <section class="how grid-container">
+        <div class="py-xl">
+          <h6>Find out more about how we work</h6>
+          <button>How we work</button>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer__upper">
+    <footer class="footer grid-container">
+      <div
+        class="footer__upper flex-col justify-space-between-lg align-center py-lg"
+      >
         <img src="./images/logo.svg" alt="logo" />
-        <ul class="footer__upper--socmed">
-          <li><a href="">fb</a></li>
-          <li><a href="">tw</a></li>
-          <li><a href="">pi</a></li>
-          <li><a href="">ins</a></li>
+        <ul class="footer__upper--socmed flex">
+          <li>
+            <a href="#">facebook</a>
+          </li>
+          <li><a href="">twitter</a></li>
+          <li><a href="">pinterest</a></li>
+          <li><a href="">instagram</a></li>
         </ul>
       </div>
+      <div class="footer__lower">
+        <dl class="footer__links py-sm">
+          <dt>Our company</dt>
+          <dd><a href="#">How we work</a></dd>
+          <dd><a href="#">Why Insure?</a></dd>
+          <dd><a href="http://">View plans</a></dd>
+          <dd><a href="http://">Reviews</a></dd>
+        </dl>
 
-      <dl class="footer__links">
-        <dt>Our company</dt>
-        <dd>How we work</dd>
-        <dd>Why Insure?</dd>
-        <dd>View plans</dd>
-        <dd>Reviews</dd>
-      </dl>
+        <dl class="footer__links py-sm">
+          <dt>Help me</dt>
+          <dd><a href="http://">FAQ</a></dd>
+          <dd><a href="http://">Terms of use</a></dd>
+          <dd><a href="http://">Privacy policy</a></dd>
+          <dd><a href="http://">Cookies</a></dd>
+        </dl>
+        <dl class="footer__links py-sm">
+          <dt>Contact</dt>
+          <dd><a href="http://">Sales</a></dd>
+          <dd><a href="http://">Support</a></dd>
+          <dd><a href="http://">Live chat</a></dd>
+        </dl>
 
-      <dl class="footer__links">
-        <dt>Help me</dt>
-        <dd>FAQ</dd>
-        <dd>Terms of use</dd>
-        <dd>Privacy policy</dd>
-        <dd>Cookies</dd>
-      </dl>
-      <dl class="footer__links">
-        <dt>Contact</dt>
-        <dd>Sales</dd>
-        <dd>Support</dd>
-        <dd>Live chat</dd>
-      </dl>
-      <dl class="footer__links">
-        <dt>Others</dt>
-        <dd>Careers</dd>
-        <dd>Press</dd>
-        <dd>Licenses</dd>
-      </dl>
+        <dl class="footer__links py-sm">
+          <dt>Others</dt>
+          <dd><a href="http://">Careers</a></dd>
+          <dd><a href="http://">Press</a></dd>
+          <dd><a href="http://">Licenses</a></dd>
+        </dl>
+      </div>
     </footer>
     <script src="js/index.js"></script>
   </body>

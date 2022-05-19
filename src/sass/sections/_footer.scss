@@ -1,0 +1,91 @@
+@use "../abstracts/breakpoints" as *;
+.footer {
+  background-color: var(--clr-neutral-500);
+  background-image: url("../images/bg-pattern-footer-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  margin-top: 9em;
+  padding-block: 3em;
+
+  &__upper {
+    gap: 2em;
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      outline: 1px solid var(--clr-neutral-600);
+      opacity: 0.5;
+    }
+    ul {
+      gap: 1em;
+      li {
+        width: 27px;
+        height: 27px;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        background-color: var(--clr-neutral-600);
+        &:hover {
+          background-color: var(--clr-neutral-700);
+        }
+
+        &:nth-child(1) {
+          mask-image: url("../images/icon-facebook.svg");
+        }
+        &:nth-child(2) {
+          mask-image: url("../images/icon-twitter.svg");
+        }
+        &:nth-child(3) {
+          mask-image: url("../images/icon-pinterest.svg");
+        }
+        &:nth-child(4) {
+          mask-image: url("../images/icon-instagram.svg");
+        }
+        a {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-primary-700);
+    dt {
+      color: var(--clr-neutral-600);
+      padding-block: 1.25em;
+    }
+
+    dd {
+      padding-block: 0.25em;
+
+      a {
+        color: var(--clr-neutral-700);
+        &:hover {
+          border-bottom: 2px solid var(--clr-neutral-700);
+        }
+      }
+    }
+  }
+  @include breakpoint(large) {
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+    background-size: 35%;
+    background-position: left top;
+    padding-block: 1em;
+    &__lower {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row;
+      text-align: left;
+
+      padding-right: 12em;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use "../components/buttons" as *;
+@use "../abstracts/breakpoints" as *;
+.how {
+  margin-top: 2em;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3em;
+
+    background-color: var(--clr-primary-700);
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  h6 {
+    color: var(--clr-neutral-500);
+  }
+  button {
+    @include btn-outline-inverted;
+  }
+  @include breakpoint(large) {
+    div {
+      flex-direction: row;
+      justify-content: space-between;
+      background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+
+      padding-inline: 8em;
+    }
+    h6 {
+      width: 31rem;
+
+      text-align: left;
+    }
+  }
+}

@@ -20,17 +20,17 @@
 
 :root {
   --grid-column: 6;
-  --max-container-width: 80rem;
-  --grid-gap: Clamp(1em, 1vw, 2.25em);
+  --max-container-width: 75rem;
+  --grid-gap: Clamp(1em, 5vw, 1.75em);
 
   --spacer-margin: 1em;
 
-  --padding-xs: Clamp(0.25em, 1vw, 0.5em);
-  --padding-sm: 0.5em;
-  --padding-md: 1em;
-  --padding-lg: 2em;
-  --padding-xl: 4em;
-  --padding-2xl: 8em;
+  --padding-xs: Clamp(0.25em, 5vw, 0.5em);
+  --padding-sm: Clamp(0.5em, 5vw, 0.75em);
+  --padding-md: Clamp(1.25em, 5vw, 2em);
+  --padding-lg: Clamp(2em, 5vw, 2.5em);
+  --padding-xl: Clamp(4em, 7vw, 6em);
+  --padding-2xl: Clamp(8em, 5vw, 8.5em);
 
   @each $base, $shade in $colors {
     @each $shades, $colors in $shade {
